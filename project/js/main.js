@@ -3,7 +3,7 @@ $(document).ready(function(){
 })
 
 function getWeather(searchQuery){
-  var url="https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&units=metric&APPID="+apiKey;
+  var url="https://api.openweathermap.org/data/2.5/weather?q="+searchQuery+"&units=metric&APPID="+process.env.API_KEY;
 
   $.ajax(url, {success: function(data){
     $(".city").text(data.name);
