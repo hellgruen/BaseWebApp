@@ -1,3 +1,6 @@
+require('dotenv').config({debug: true});
+console.log("Api key: ", process.env.API_KEY); 
+console.log("Porto: ", process.env.PORTO); 
 var express = require('express');
 var app = express();
 

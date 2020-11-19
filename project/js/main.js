@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  getWeather();
+  getWeather('Berlin');
 })
 
 function getWeather(searchQuery){
-  var url="https://api.openweathermap.org/data/2.5/weather?q="+searchQuery+"&units=metric&APPID="+apiKey;
+  var url=`https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&units=metric&APPID=${apiKey}`;
 
   $.ajax(url, {success: function(data){
     $(".city").text(data.name);
